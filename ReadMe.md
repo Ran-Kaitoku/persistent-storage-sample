@@ -23,12 +23,12 @@ Androidの自動バックアップを有効すると永続的に保存可能に�
     fullBackupContentは自動バックアップのルールを規制するxmlファイルを指定する；
   
   - `res/xml/`フォルダの直下に`backup_descriptor.xml`の作成：
-  ```xml
-  <?xml version="1.0" encoding="utf-8"?>
-  <full-backup-content>
-    <include domain="sharedpref" path="." />
-  </full-backup-content>
-  ```
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <full-backup-content>
+        <include domain="sharedpref" path="." />
+    </full-backup-content>
+    ```
   このxmlは`SharedPreferences`に格納されいたデータをバックアップすることを指定しています；
 
 このAndroidサンプルコードをAndroid Libraryプロジェクトとしてビルドすると、`.aar`ファイルが作成してくれます。上記の`AndroidManifest.xml`と`backup_descriptor.xml`も`.aar`ファイルに含まれる。
